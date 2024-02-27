@@ -3,6 +3,7 @@ from flatten_json import flatten
 def flatten_json_object(json_object):
     try:
         return flatten(json_object)
+    
     except AssertionError as ae:
         print(f'The json object isn\'t in the correct format:\n {ae}')
     except TypeError as te:
