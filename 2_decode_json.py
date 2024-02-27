@@ -1,5 +1,6 @@
 import json
 import pandas as pd
+import polars as pl
 
 class json_decoding_tool:
     
@@ -15,7 +16,14 @@ class json_decoding_tool:
     # Accepts a json object and converts it into a Pandas Data Frame
     def decode_json_to_df(self):
         i = json.loads(self.json_object)
-        df = pd.json_normalize(i)
+        df = pd.read_json(i)
+        print('json object successfully converted to dataframe (normalised)')
+        return df
+    
+     # Accepts a json object and converts it into a Polars Data Frame
+    def decode_json_to_df(self):
+        i = json.loads(self.json_object)
+        df = pl.read_json(i)
         print('json object successfully converted to dataframe (normalised)')
         return df
     
