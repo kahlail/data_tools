@@ -13,18 +13,11 @@ class json_decoding_tool:
         print('json object successfully converted to a list of dictionaries')
         return i
     
-    # Accepts a json object and converts it into a Pandas Data Frame
-    def decode_json_to_df(self):
+    # Accepts a json object and converts it into a Data Frame (dependency injection so you can use either Pandas or Polars)
+    def decode_json_to_df(self, data_lib):
         i = json.loads(self.json_object)
-        df = pd.read_json(i)
-        print('json object successfully converted to dataframe (normalised)')
-        return df
-    
-     # Accepts a json object and converts it into a Polars Data Frame
-    def decode_json_to_df(self):
-        i = json.loads(self.json_object)
-        df = pl.read_json(i)
-        print('json object successfully converted to dataframe (normalised)')
+        df = data_lib.read_json(i)
+        print('json object successfully converted to dataframe')
         return df
     
     # Converts a json object to CSV and outputs the file to the root (data_tools) directory.
