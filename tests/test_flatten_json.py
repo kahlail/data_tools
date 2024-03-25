@@ -1,5 +1,5 @@
 import pytest
-from data_tools.flatten_json_object import flatten_json_object
+from data_tools.b_flatten_json_object import flatten_json_object
 
 # This test checks that the function works with the expected json input
 def test_will_flatten_nested_json():

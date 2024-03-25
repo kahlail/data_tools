@@ -1,8 +1,7 @@
 import json
 import pandas as pd
-import polars as pl
 
-class json_decoding_tool:
+class JsonDecodingTool:
     
     def __init__(self, json_object) -> None:
         self.json_object = json_object

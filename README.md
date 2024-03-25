@@ -1,11 +1,11 @@
 # data_tools
 Re-useable modules for common data problems and tasks. 
 
-1. flatten_json
+a. flatten_json
 flattens nested values in a json object so it's ready for decoding.
 
-2. decode_json
-convert a json object into a python friendly list, a pandas dataframe, a csv file or an excel file.
+b. decode_json
+convert a json object into a python friendly list, a dataframe, a csv file or an excel file.
 
 3. encode_json
 converts a pandas dataframe, csv file or excel file into a json object.
